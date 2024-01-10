@@ -52,15 +52,15 @@ function actualiserEcran() {
     document.getElementById('prixVilles').innerText = prixVilles;
 
     document.getElementById('enfants').innerText = enfants;
-    // document.getElementById('prixEnfants').innerText = prixEnfants;
+    document.getElementById('prixEnfants').innerText = prixEnfants;
     document.getElementById('grandmeres').innerText = grandmeres;
-    // document.getElementById('prixGrandmeres').innerText = prixGrandmeres;
+    document.getElementById('prixGrandmeres').innerText = prixGrandmeres;
     document.getElementById('esclaves').innerText = esclaves;
-    // document.getElementById('prixEsclaves').innerText = prixEsclaves;
+    document.getElementById('prixEsclaves').innerText = prixEsclaves;
     document.getElementById('travailleurs').innerText = travailleurs;
-    // document.getElementById('prixTravailleurs').innerText = prixTravailleurs;
+    document.getElementById('prixTravailleurs').innerText = prixTravailleurs;
     document.getElementById('goats').innerText = goats;
-    // document.getElementById('prixGoats').innerText = prixGoats;
+    document.getElementById('prixGoats').innerText = prixGoats;
 
     document.getElementById('golds').innerText = golds;
     document.getElementById('prod').innerText = prod;

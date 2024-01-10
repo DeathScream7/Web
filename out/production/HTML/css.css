@@ -12,6 +12,14 @@ button{
     appearance: auto;
 }
 
+#header{
+    background-color: darkgoldenrod;
+    position: absolute;
+    height: 10%;
+    width: 94%;
+    left: 5%;
+}
+
 #conteneur{
 
 }
@@ -19,14 +27,16 @@ button{
 #leftSection {
     background-color: goldenrod;
     position: absolute;
-    width: 32%;
+    width: 30%;
+    left: 5%;
+    top: 12%;
     height: 90%;
 }
 
 #leftSection div{
     background-size: cover;
     background-position: center;
-    height: 12%;
+    height: 10%;
 }
 
 #leftSection p{
@@ -60,9 +70,10 @@ button{
 
 #middleSection{
     position: absolute;
-    width: 33%;
+    width: 30%;
     height: 90%;
-    left: 33%;
+    top: 12%;
+    left: 37%;
     justify-content: center;
 }
 
@@ -101,15 +112,16 @@ button{
 #rightSection {
     background-color: goldenrod;
     position: absolute;
-    width: 33%;
+    width: 30%;
     height: 90%;
-    left: 66%;
+    top: 12%;
+    left: 69%;
 }
 
 #rightSection div{
     background-size: cover;
     background-position: center;
-    height: 12%;
+    height: 13%;
 }
 
 #rightSection p{
@@ -161,8 +173,8 @@ button{
     z-index: 3;
     background-color: red;
     position: absolute;
-    width: 33%;
-    left: 33%;
+    width: 30%;
+    left: 37%;
 }
 
 #communistLogo{
@@ -185,4 +197,54 @@ button{
     border: 1px solid black;
     padding: 10px;
     /* Ajoutez d'autres styles selon vos préférences */
+}
+
+
+
+#sidebar {
+    background-color: gold;
+    position: absolute;
+    height: 100%;
+    transition: width 0.3s;
+    width: 4%;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden; /* Masquer le contenu débordant */
+}
+
+#sidebar:hover{
+    transition: width 0.3s;
+    width: 15%;
+}
+
+#sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#sidebar li {
+    padding: 8%;
+}
+
+#sidebar a {
+    text-decoration: none;
+    color: gold;
+    transition: color 0.3s;
+    font-size: 200%;
+}
+
+#sidebar:hover a{
+    color: white;
+}
+
+#sidebar a:hover {
+    color: darkgoldenrod;
+    text-decoration: underline;
+}
+
+#navebarListe{
+    position: absolute;
+    top: 10%;
+    left: 20%;
 }
