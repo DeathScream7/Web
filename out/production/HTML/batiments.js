@@ -37,7 +37,7 @@ function actualiserEcran() {
         communistLogo.style.top = -10+"%";
     }
 
-
+//test
     document.getElementById('gants').innerText = gants;
     // document.getElementById('prixGants').innerText = prixGants;
     document.getElementById('pioches').innerText = pioches;
