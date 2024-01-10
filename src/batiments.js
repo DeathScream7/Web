@@ -165,7 +165,7 @@ function production() {
 
 // Fonction pour ajouter un point et mettre à jour l'affichage
 function ajouterProd() {
-    prod=enfants*100+grandmeres*200+esclaves*500+travailleurs*1000+goats*10000;
+    prod=enfants*10+grandmeres*20+esclaves*50+travailleurs*100+goats*1000;
     actualiserEcran();
 }
 
