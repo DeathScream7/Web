@@ -1,5 +1,6 @@
 body{
     background-color: wheat;
+    touch-action: manipulation;
 }
 
 button{
@@ -134,7 +135,7 @@ button{
 
 @keyframes chute {
     from {
-        top: 0%;
+        top: 0;
     }
     to {
         top: 100%;
@@ -153,7 +154,7 @@ button{
     z-index: 4;
     position: absolute;
     width: 25%;
-    height: 0%;
+    height: 0;
     left: 37%;
     object-fit: contain; /* ou "cover" selon votre besoin */
     /*object-position: center; !* ou une autre position selon votre besoin *!*/
