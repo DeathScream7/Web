@@ -1,5 +1,6 @@
 body{
     background-color: wheat;
+    touch-action: manipulation;
 }
 
 button{
