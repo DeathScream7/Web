@@ -39,17 +39,17 @@ function actualiserEcran() {
 
 //test
     document.getElementById('gants').innerText = gants;
-    // document.getElementById('prixGants').innerText = prixGants;
+    document.getElementById('prixGants').innerText = prixGants;
     document.getElementById('pioches').innerText = pioches;
-    // document.getElementById('prixPioches').innerText = prixPioches;
+    document.getElementById('prixPioches').innerText = prixPioches;
     document.getElementById('tracteurs').innerText = tracteurs;
-    // document.getElementById('prixTracteurs').innerText = prixTracteurs;
+    document.getElementById('prixTracteurs').innerText = prixTracteurs;
     document.getElementById('fermes').innerText = fermes;
-    // document.getElementById('prixFermes').innerText = prixFermes;
+    document.getElementById('prixFermes').innerText = prixFermes;
     document.getElementById('villages').innerText = villages;
-    // document.getElementById('prixVillages').innerText = prixVillages;
+    document.getElementById('prixVillages').innerText = prixVillages;
     document.getElementById('villes').innerText = villes;
-    // document.getElementById('prixVilles').innerText = prixVilles;
+    document.getElementById('prixVilles').innerText = prixVilles;
 
     document.getElementById('enfants').innerText = enfants;
     // document.getElementById('prixEnfants').innerText = prixEnfants;
