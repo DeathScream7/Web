@@ -1,0 +1,172 @@
+body{
+    background-color: wheat;
+}
+
+button{
+    appearance: auto;
+}
+
+#conteneur{
+
+}
+
+#leftSection {
+    background-color: goldenrod;
+    position: absolute;
+    width: 32%;
+    height: 90%;
+}
+
+#leftSection div{
+    background-size: cover;
+    background-position: center;
+    height: 15%;
+}
+
+#gantDiv{
+    background-image: url('images/gants.jpg');
+}
+
+#piocheDiv{
+    background-image: url('images/pioches.jpg');
+}
+
+#tracteurDiv{
+    background-image: url('images/tracteur.jpg');
+}
+
+#fermeDiv{
+    background-image: url('images/ferme.png');
+}
+
+#villageDiv{
+    background-image: url('images/village.jpg');
+}
+
+#villeDiv{
+    background-image: url('images/ville.jpg');
+}
+
+#middleSection{
+    position: absolute;
+    width: 33%;
+    height: 90%;
+    left: 33%;
+    justify-content: center;
+}
+
+#middleSection p {
+    position: relative;
+    z-index: 10;
+    color: cadetblue;
+    text-align: center;
+}
+#paragraphePoint{
+    font-size: 200%;
+}
+
+#paragrapheProd{
+    font-size: 150%;
+}
+
+#coinDiv{
+    position: absolute;
+    width: 103%;
+    height: 50%;
+    top: 50%;
+}
+
+#mainButton{
+    z-index: 5;
+    position: absolute;
+    width: 80%;
+    left: 10%;
+}
+
+#mainButton:hover{
+    transform: scale(1.1);
+}
+
+#rightSection {
+    background-color: goldenrod;
+    position: absolute;
+    width: 33%;
+    height: 90%;
+    left: 66%;
+}
+
+#rightSection div{
+    background-size: cover;
+    background-position: center;
+    height: 15%;
+}
+
+#enfantsDiv{
+    background-image: url('images/enfant.jpg');
+}
+
+#grandmerseDiv{
+    background-image: url('images/grandmere.jpg');
+}
+
+#escalvesDiv{
+    background-image: url('images/esclave.jpg');
+}
+
+#travailleursDiv{
+    background-image: url('images/travailleur.jpeg');
+}
+
+#goatsDiv{
+    background-image: url('images/goat.jpg');
+}
+
+#littleCoin{
+    z-index: 10;
+    pointer-events: none;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-image: url('images/coin.png');
+    background-size: cover; /* Redimensionne l'image pour remplir le conteneur */
+    animation: 1s linear 0s infinite chute;
+}
+
+@keyframes chute {
+    from {
+        top: 0%;
+    }
+    to {
+        top: 100%;
+    }
+}
+
+#communistBand{
+    z-index: 3;
+    background-color: red;
+    position: absolute;
+    width: 33%;
+    left: 33%;
+}
+
+#communistLogo{
+    z-index: 4;
+    position: absolute;
+    width: 25%;
+    height: 0%;
+    left: 37%;
+    object-fit: contain; /* ou "cover" selon votre besoin */
+    /*object-position: center; !* ou une autre position selon votre besoin *!*/
+
+}
+
+
+
+/* Style de la fenêtre contextuelle */
+#informationBox {
+    position: relative;
+    background-color: white;
+    border: 1px solid black;
+    padding: 10px;
+    /* Ajoutez d'autres styles selon vos préférences */
+}
