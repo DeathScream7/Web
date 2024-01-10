@@ -49,3 +49,21 @@ escalvesDiv.addEventListener("mouseover", function() {
 escalvesDiv.addEventListener("mouseout", function() {
     informationBox.style.display = "none"; // Masque la fenêtre contextuelle lorsque le curseur quitte la div
 });
+
+
+
+
+
+
+
+
+
+// Empêcher le zoom sur double-clic sur les appareils tactiles
+let lastTouchEnd = 0;
+document.addEventListener('touchend', (event) => {
+    const now = (new Date()).getTime();
+    if (now - lastTouchEnd <= 300) {
+        event.preventDefault();
+    }
+    lastTouchEnd = now;
+}, false);
