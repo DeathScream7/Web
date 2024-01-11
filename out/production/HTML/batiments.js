@@ -1,4 +1,3 @@
-
 let golds = 0; // Variable pour stocker les golds
 let gants = 0;
 let prixGants = 10;
@@ -12,6 +11,29 @@ let villages = 0;
 let prixVillages = 100000;
 let villes = 0;
 let prixVilles = 1000000;
+
+
+// Une fois la page chargée
+window.addEventListener("load", function() {
+    getCookies();
+    ajouterProd();
+});
+
+//Avant de quitter la page
+window.addEventListener("beforeunload", function (event) {
+    setCookie("userGolds", golds, 10); // 10 jours de validité du cookie
+    setCookie("userGants", gants, 10); // 10 jours de validité du cookie
+    setCookie("userPioches", pioches, 10); // 10 jours de validité du cookie
+    setCookie("userTracteurs", tracteurs, 10); // 10 jours de validité du cookie
+    setCookie("userFermes", fermes, 10); // 10 jours de validité du cookie
+    setCookie("userVillages", villages, 10); // 10 jours de validité du cookie
+    setCookie("userVilles", villes, 10); // 10 jours de validité du cookie
+    setCookie("userEnfants", enfants, 10); // 10 jours de validité du cookie
+    setCookie("userGrandsmeres", grandmeres, 10); // 10 jours de validité du cookie
+    setCookie("userEsclaves", esclaves, 10); // 10 jours de validité du cookie
+    setCookie("userTravailleurs", travailleurs, 10); // 10 jours de validité du cookie
+    setCookie("userGoats", goats, 10); // 10 jours de validité du cookie
+});
 
 // Fonction pour ajouter un point et mettre à jour l'affichage
 function actualiserEcran() {
@@ -36,6 +58,19 @@ function actualiserEcran() {
         communistLogo.style.height = 98.8+"%";
         communistLogo.style.top = -10+"%";
     }
+
+    prixGants = 10 + gants;
+    prixPioches = 100 + 2*pioches;
+    prixTracteurs = 1000 + 4*tracteurs;
+    prixFermes = 10000 + 80*fermes;
+    prixVillages = 100000 + 1600*villages;
+    prixVilles = 1000000 + 32000*villes;
+
+    prixEnfants = 1000 + 100*enfants;
+    prixGrandmeres = 2000 + 200*grandmeres;
+    prixEsclaves = 10000 + 800*esclaves;
+    prixTravailleurs = 100000 + 8000*travailleurs;
+    prixGoats = 1000000 + 16000*goats;
 
 //test
     document.getElementById('gants').innerText = gants;
@@ -64,21 +99,26 @@ function actualiserEcran() {
 
     document.getElementById('golds').innerText = golds;
     document.getElementById('prod').innerText = prod;
+
+    // Stocker le score dans les cookies
+
+
+
 }
 
 // Fonction pour ajouter un point et mettre à jour l'affichage
 function ajouterGold() {
-    golds=golds+1+gants+pioches*2+tracteurs*4+fermes*8+villages*16+villes*32;
+    golds = golds + 1 + gants + pioches * 2 + tracteurs * 4 + fermes * 8 + villages * 16 + villes * 32;
     actualiserEcran();
 }
 
 // Acheter gant
 function acheterGant() {
+    console.log("hello");
     if (golds >= prixGants) {
         golds = golds - prixGants
         gants++;
     }
-    prixGants = 10 + gants;
     actualiserEcran();
 }
 
@@ -88,7 +128,6 @@ function acheterPioche() {
         golds=golds-prixPioches
         pioches++;
     }
-    prixPioches = 100 + 2*pioches;
     actualiserEcran();
 }
 
@@ -98,7 +137,6 @@ function acheterTracteur() {
         golds=golds-prixTracteurs
         tracteurs++;
     }
-    prixTracteurs = 1000 + 4*tracteurs;
     actualiserEcran();
 }
 
@@ -108,7 +146,6 @@ function acheterFerme() {
         golds=golds-prixFermes
         fermes++;
     }
-    prixFermes = 10000 + 8*fermes;
     actualiserEcran();
 }
 
@@ -118,7 +155,6 @@ function acheterVillage() {
         golds=golds-prixVillages
         villages++;
     }
-    prixVillages = 100000 + 16*villages;
     actualiserEcran();
 }
 // Acheter ville
@@ -127,20 +163,65 @@ function acheterVille() {
         golds=golds-prixVilles
         villes++;
     }
-    prixVilles = 1000000 + 32*villes;
     actualiserEcran()
 }
 
+
+
+
+
+
+
+
+
+
+
 // Ajout d'un événement au clic sur le bouton
 document.getElementById('mainButton').addEventListener('click', ajouterGold);
-document.getElementById('gantDiv').addEventListener('click', acheterGant);
-document.getElementById('piocheDiv').addEventListener('click', acheterPioche);
-document.getElementById('tracteurDiv').addEventListener('click', acheterTracteur);
-document.getElementById('fermeDiv').addEventListener('click', acheterFerme);
-document.getElementById('villageDiv').addEventListener('click', acheterVillage);
-document.getElementById('villeDiv').addEventListener('click', acheterVille);
 
 
+var intervalId;
+var timer = 100;
+
+addEventListener("mouseup", function() {
+    clearInterval(intervalId);
+});
+document.getElementById('gantDiv').addEventListener("mousedown", function() {
+    intervalId = setInterval(function() {
+        acheterGant();
+    }, timer);
+});
+document.getElementById('piocheDiv').addEventListener("mousedown", function() {
+    intervalId = setInterval(function() {
+        acheterPioche();
+    }, timer);
+});
+document.getElementById('tracteurDiv').addEventListener("mousedown", function() {
+    intervalId = setInterval(function() {
+        acheterTracteur();
+    }, timer);
+});
+document.getElementById('fermeDiv').addEventListener("mousedown", function() {
+    intervalId = setInterval(function() {
+        acheterFerme();
+    }, timer);
+});
+document.getElementById('villageDiv').addEventListener("mousedown", function() {
+    intervalId = setInterval(function() {
+        acheterVillage();
+    }, timer);
+});
+document.getElementById('villeDiv').addEventListener("mousedown", function() {
+    intervalId = setInterval(function() {
+        acheterVille();
+    }, timer);
+});
+// document.getElementById('gantDiv').addEventListener('mouseover', acheterGant);
+// document.getElementById('piocheDiv').addEventListener('mouseover', acheterPioche);
+// document.getElementById('tracteurDiv').addEventListener('mouseover', acheterTracteur);
+// document.getElementById('fermeDiv').addEventListener('mouseover', acheterFerme);
+// document.getElementById('villageDiv').addEventListener('mouseover', acheterVillage);
+// document.getElementById('villeDiv').addEventListener('mouseover', acheterVille);
 
 
 
@@ -171,7 +252,6 @@ function ajouterProd() {
 
 // Acheter enfants
 function acheterEnfant() {
-    prixEnfants = 1000 + 100*enfants;
     if (golds >= prixEnfants) {
         golds = golds - prixEnfants
         enfants++;
@@ -181,7 +261,6 @@ function acheterEnfant() {
 
 // Acheter grandmeres
 function acheterGrandmere() {
-    prixGrandmeres = 2000 + 200*grandmeres;
     if (golds >= prixGrandmeres) {
         golds=golds-prixGrandmeres
         grandmeres++;
@@ -191,7 +270,6 @@ function acheterGrandmere() {
 
 // Acheter esclaves
 function acheterEsclave() {
-    prixEsclaves = 10000 + 800*esclaves;
     if (golds >= prixEsclaves) {
         golds=golds-prixEsclaves
         esclaves++;
@@ -201,7 +279,6 @@ function acheterEsclave() {
 
 // Acheter travailleurs
 function acheterTravailleur() {
-    prixTravailleurs = 100000 + 8000*travailleurs;
     if (golds >= prixTravailleurs) {
         golds=golds-prixTravailleurs
         travailleurs++;
@@ -211,7 +288,6 @@ function acheterTravailleur() {
 
 // Acheter goats
 function acheterGoat() {
-    prixGoats = 1000000 + 16000*goats;
     if (golds >= prixGoats) {
         golds=golds-prixGoats
         goats++;
@@ -222,11 +298,37 @@ function acheterGoat() {
 
 // Ajout d'un événement au clic sur le bouton
 setInterval(production, 1000); // Exécute maFonction toutes les 1000 millisecondes (1 seconde)
-document.getElementById('enfantsDiv').addEventListener('click', acheterEnfant);
-document.getElementById('grandmerseDiv').addEventListener('click', acheterGrandmere);
-document.getElementById('escalvesDiv').addEventListener('click', acheterEsclave);
-document.getElementById('travailleursDiv').addEventListener('click', acheterTravailleur);
-document.getElementById('goatsDiv').addEventListener('click', acheterGoat);
+
+document.getElementById('enfantsDiv').addEventListener("mousedown", function() {
+    intervalId = setInterval(function() {
+        acheterEnfant();
+    }, timer);
+});
+document.getElementById('grandmerseDiv').addEventListener("mousedown", function() {
+    intervalId = setInterval(function() {
+        acheterGrandmere();
+    }, timer);
+});
+document.getElementById('escalvesDiv').addEventListener("mousedown", function() {
+    intervalId = setInterval(function() {
+        acheterEsclave();
+    }, timer);
+});
+document.getElementById('travailleursDiv').addEventListener("mousedown", function() {
+    intervalId = setInterval(function() {
+        acheterTravailleur();
+    }, timer);
+});
+document.getElementById('goatsDiv').addEventListener("mousedown", function() {
+    intervalId = setInterval(function() {
+        acheterGoat();
+    }, timer);
+});
+// document.getElementById('enfantsDiv').addEventListener('mousedown', acheterEnfant);
+// document.getElementById('grandmerseDiv').addEventListener('mousedown', acheterGrandmere);
+// document.getElementById('escalvesDiv').addEventListener('mousedown', acheterEsclave);
+// document.getElementById('travailleursDiv').addEventListener('mousedown', acheterTravailleur);
+// document.getElementById('goatsDiv').addEventListener('mousedown', acheterGoat);
 
 
 
@@ -242,3 +344,67 @@ acheterGrandmere();
 acheterEsclave();
 acheterTravailleur();
 acheterGoat();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Fonction pour définir un cookie
+function setCookie(name, value, days) {
+    const expires = new Date();
+    expires.setTime(expires.getTime() + days * 24 * 60 * 60 * 1000);
+    document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/`;
+}
+
+
+
+
+// Fonction pour récupérer la valeur d'un cookie
+function getCookie(name) {
+    const cookieName = `${name}=`;
+    const decodedCookie = decodeURIComponent(document.cookie);
+    const cookieArray = decodedCookie.split(';');
+    for (let i = 0; i < cookieArray.length; i++) {
+        let cookie = cookieArray[i];
+        while (cookie.charAt(0) === ' ') {
+            cookie = cookie.substring(1);
+        }
+        if (cookie.indexOf(cookieName) === 0) {
+            return cookie.substring(cookieName.length, cookie.length);
+        }
+    }
+    return null;
+}
+
+
+function getCookies(){
+    golds = parseInt(getCookie("userGolds"));
+    gants = parseInt(getCookie("userGants"));
+    pioches = parseInt(getCookie("userPioches"));
+    tracteurs = parseInt(getCookie("userTracteurs"));
+    fermes = parseInt(getCookie("userFermes"));
+    villages = parseInt(getCookie("userVillages"));
+    villes = parseInt(getCookie("userVilles"));
+    enfants = parseInt(getCookie("userEnfants"));
+    grandmeres = parseInt(getCookie("userGrandsmeres"));
+    esclaves = parseInt(getCookie("userEsclaves"));
+    travailleurs = parseInt(getCookie("userTravailleurs"));
+    goats = parseInt(getCookie("userGoats"));
+}
+
+
+
