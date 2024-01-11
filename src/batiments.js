@@ -215,12 +215,12 @@ document.getElementById('villeDiv').addEventListener("mousedown", function() {
         acheterVille();
     }, timer);
 });
-document.getElementById('gantDiv').addEventListener('mouseover', acheterGant);
-document.getElementById('piocheDiv').addEventListener('mouseover', acheterPioche);
-document.getElementById('tracteurDiv').addEventListener('mouseover', acheterTracteur);
-document.getElementById('fermeDiv').addEventListener('mouseover', acheterFerme);
-document.getElementById('villageDiv').addEventListener('mouseover', acheterVillage);
-document.getElementById('villeDiv').addEventListener('mouseover', acheterVille);
+document.getElementById('gantDiv').addEventListener('click', acheterGant);
+document.getElementById('piocheDiv').addEventListener('click', acheterPioche);
+document.getElementById('tracteurDiv').addEventListener('click', acheterTracteur);
+document.getElementById('fermeDiv').addEventListener('click', acheterFerme);
+document.getElementById('villageDiv').addEventListener('click', acheterVillage);
+document.getElementById('villeDiv').addEventListener('click', acheterVille);
 
 
 
@@ -323,11 +323,11 @@ document.getElementById('goatsDiv').addEventListener("mousedown", function() {
         acheterGoat();
     }, timer);
 });
-document.getElementById('enfantsDiv').addEventListener('mousedown', acheterEnfant);
-document.getElementById('grandmerseDiv').addEventListener('mousedown', acheterGrandmere);
-document.getElementById('escalvesDiv').addEventListener('mousedown', acheterEsclave);
-document.getElementById('travailleursDiv').addEventListener('mousedown', acheterTravailleur);
-document.getElementById('goatsDiv').addEventListener('mousedown', acheterGoat);
+document.getElementById('enfantsDiv').addEventListener('click', acheterEnfant);
+document.getElementById('grandmerseDiv').addEventListener('click', acheterGrandmere);
+document.getElementById('escalvesDiv').addEventListener('click', acheterEsclave);
+document.getElementById('travailleursDiv').addEventListener('click', acheterTravailleur);
+document.getElementById('goatsDiv').addEventListener('click', acheterGoat);
 
 
 
