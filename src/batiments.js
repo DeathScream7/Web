@@ -215,12 +215,12 @@ document.getElementById('villeDiv').addEventListener("mousedown", function() {
         acheterVille();
     }, timer);
 });
-// document.getElementById('gantDiv').addEventListener('mouseover', acheterGant);
-// document.getElementById('piocheDiv').addEventListener('mouseover', acheterPioche);
-// document.getElementById('tracteurDiv').addEventListener('mouseover', acheterTracteur);
-// document.getElementById('fermeDiv').addEventListener('mouseover', acheterFerme);
-// document.getElementById('villageDiv').addEventListener('mouseover', acheterVillage);
-// document.getElementById('villeDiv').addEventListener('mouseover', acheterVille);
+document.getElementById('gantDiv').addEventListener('mouseover', acheterGant);
+document.getElementById('piocheDiv').addEventListener('mouseover', acheterPioche);
+document.getElementById('tracteurDiv').addEventListener('mouseover', acheterTracteur);
+document.getElementById('fermeDiv').addEventListener('mouseover', acheterFerme);
+document.getElementById('villageDiv').addEventListener('mouseover', acheterVillage);
+document.getElementById('villeDiv').addEventListener('mouseover', acheterVille);
 
 
 
@@ -323,11 +323,11 @@ document.getElementById('goatsDiv').addEventListener("mousedown", function() {
         acheterGoat();
     }, timer);
 });
-// document.getElementById('enfantsDiv').addEventListener('mousedown', acheterEnfant);
-// document.getElementById('grandmerseDiv').addEventListener('mousedown', acheterGrandmere);
-// document.getElementById('escalvesDiv').addEventListener('mousedown', acheterEsclave);
-// document.getElementById('travailleursDiv').addEventListener('mousedown', acheterTravailleur);
-// document.getElementById('goatsDiv').addEventListener('mousedown', acheterGoat);
+document.getElementById('enfantsDiv').addEventListener('mousedown', acheterEnfant);
+document.getElementById('grandmerseDiv').addEventListener('mousedown', acheterGrandmere);
+document.getElementById('escalvesDiv').addEventListener('mousedown', acheterEsclave);
+document.getElementById('travailleursDiv').addEventListener('mousedown', acheterTravailleur);
+document.getElementById('goatsDiv').addEventListener('mousedown', acheterGoat);
 
 
 
