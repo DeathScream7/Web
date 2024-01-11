@@ -114,7 +114,6 @@ function ajouterGold() {
 
 // Acheter gant
 function acheterGant() {
-    console.log("hello");
     if (golds >= prixGants) {
         golds = golds - prixGants
         gants++;
@@ -387,7 +386,7 @@ function getCookie(name) {
             return cookie.substring(cookieName.length, cookie.length);
         }
     }
-    return null;
+    return 0;
 }
 
 
