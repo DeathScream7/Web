@@ -190,7 +190,17 @@ document.getElementById('gantDiv').addEventListener("mousedown", function() {
         acheterGant();
     }, timer);
 });
+document.getElementById('gantDiv').addEventListener("touchstart", function() {
+    intervalId = setInterval(function() {
+        acheterGant();
+    }, timer);
+});
 document.getElementById('piocheDiv').addEventListener("mousedown", function() {
+    intervalId = setInterval(function() {
+        acheterPioche();
+    }, timer);
+});
+document.getElementById('piocheDiv').addEventListener("touchstart", function() {
     intervalId = setInterval(function() {
         acheterPioche();
     }, timer);
@@ -200,7 +210,17 @@ document.getElementById('tracteurDiv').addEventListener("mousedown", function() 
         acheterTracteur();
     }, timer);
 });
+document.getElementById('tracteurDiv').addEventListener("touchstart", function() {
+    intervalId = setInterval(function() {
+        acheterTracteur();
+    }, timer);
+});
 document.getElementById('fermeDiv').addEventListener("mousedown", function() {
+    intervalId = setInterval(function() {
+        acheterFerme();
+    }, timer);
+});
+document.getElementById('fermeDiv').addEventListener("touchstart", function() {
     intervalId = setInterval(function() {
         acheterFerme();
     }, timer);
@@ -210,11 +230,22 @@ document.getElementById('villageDiv').addEventListener("mousedown", function() {
         acheterVillage();
     }, timer);
 });
+document.getElementById('villageDiv').addEventListener("touchstart", function() {
+    intervalId = setInterval(function() {
+        acheterVillage();
+    }, timer);
+});
 document.getElementById('villeDiv').addEventListener("mousedown", function() {
     intervalId = setInterval(function() {
         acheterVille();
     }, timer);
 });
+document.getElementById('villeDiv').addEventListener("touchstart", function() {
+    intervalId = setInterval(function() {
+        acheterVille();
+    }, timer);
+});
+
 document.getElementById('gantDiv').addEventListener('click', acheterGant);
 document.getElementById('piocheDiv').addEventListener('click', acheterPioche);
 document.getElementById('tracteurDiv').addEventListener('click', acheterTracteur);

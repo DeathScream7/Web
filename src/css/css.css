@@ -1,0 +1,32 @@
+body{
+    background-color: wheat;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed */
+}
+
+button{
+    appearance: auto;
+}
+
+#header{
+    background-color: darkgoldenrod;
+    position: absolute;
+    height: 10%;
+    width: 94%;
+    left: 5%;
+}
+
+#conteneur{
+
+}
+
+#informationBox {
+    position: relative;
+    background-color: white;
+    border: 1px solid black;
+    padding: 10px;
+}

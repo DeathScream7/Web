@@ -1,0 +1,47 @@
+#sidebar {
+    background-color: gold;
+    position: absolute;
+    height: 100%;
+    transition: width 0.3s;
+    width: 4%;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#sidebar:hover{
+    transition: width 0.3s;
+    width: 15%;
+}
+
+#sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#sidebar li {
+    padding: 8%;
+}
+
+#sidebar a {
+    text-decoration: none;
+    color: gold;
+    transition: color 0.3s;
+    font-size: 200%;
+}
+
+#sidebar:hover a{
+    color: white;
+}
+
+#sidebar a:hover {
+    color: darkgoldenrod;
+    text-decoration: underline;
+}
+
+#navebarListe{
+    position: absolute;
+    top: 10%;
+    left: 20%;
+}

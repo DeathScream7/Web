@@ -1,0 +1,39 @@
+#rightSection {
+    background-color: goldenrod;
+    position: absolute;
+    width: 30%;
+    height: 90%;
+    top: 12%;
+    left: 69%;
+}
+
+#rightSection div{
+    background-size: cover;
+    background-position: center;
+    height: 13%;
+}
+
+#rightSection p{
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+#enfantsDiv{
+    background-image: url('../images/enfant.jpg');
+}
+
+#grandmerseDiv{
+    background-image: url('../images/grandmere.jpg');
+}
+
+#escalvesDiv{
+    background-image: url('../images/esclave.jpg');
+}
+
+#travailleursDiv{
+    background-image: url('../images/travailleur.jpeg');
+}
+
+#goatsDiv{
+    background-image: url('../images/goat.jpg');
+}
