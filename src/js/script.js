@@ -49,3 +49,9 @@ escalvesDiv.addEventListener("mouseover", function() {
 escalvesDiv.addEventListener("mouseout", function() {
     informationBox.style.display = "none"; // Masque la fenêtre contextuelle lorsque le curseur quitte la div
 });
+
+
+
+
+
+

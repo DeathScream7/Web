@@ -12,6 +12,8 @@ let prixVillages = 100000;
 let villes = 0;
 let prixVilles = 1000000;
 
+let intervalId;
+let timer = 101;
 
 // Une fois la page chargée
 window.addEventListener("load", function() {
@@ -34,6 +36,8 @@ window.addEventListener("beforeunload", function (event) {
     setCookie("userTravailleurs", travailleurs, 10); // 10 jours de validité du cookie
     setCookie("userGoats", goats, 10); // 10 jours de validité du cookie
 });
+
+
 
 // Fonction pour ajouter un point et mettre à jour l'affichage
 function actualiserEcran() {
@@ -99,9 +103,6 @@ function actualiserEcran() {
 
     document.getElementById('golds').innerText = golds;
     document.getElementById('prod').innerText = prod;
-
-    // Stocker le score dans les cookies
-
 
 
 }
@@ -179,18 +180,20 @@ function acheterVille() {
 document.getElementById('mainButton').addEventListener('click', ajouterGold);
 
 
-var intervalId;
-var timer = 100;
+
 
 addEventListener("mouseup", function() {
     clearInterval(intervalId);
+    timer = 200;
 });
 addEventListener("touchend", function() {
     clearInterval(intervalId);
+    timer = 200;
 });
 document.getElementById('gantDiv').addEventListener("mousedown", function() {
     intervalId = setInterval(function() {
         acheterGant();
+        timer=timer-10;
     }, timer);
 });
 document.getElementById('gantDiv').addEventListener("touchstart", function() {
@@ -439,5 +442,30 @@ function getCookies(){
     goats = parseInt(getCookie("userGoats"));
 }
 
-
+function resetGame(){
+    golds = 0;
+    gants = 0;
+    prixGants = 10;
+    pioches = 0;
+    prixPioches = 100;
+    tracteurs = 0;
+    prixTracteurs = 1000;
+    fermes = 0;
+    prixFermes = 10000;
+    villages = 0;
+    prixVillages = 100000;
+    villes = 0;
+    prixVilles = 1000000;
+    prod = 0;
+    enfants = 0;
+    prixEnfants = 0;
+    grandmeres = 0;
+    prixGrandmeres = 0;
+    esclaves = 0;
+    prixEsclaves = 0;
+    travailleurs = 0;
+    prixTravailleurs = 0;
+    goats = 0;
+    prixGoats = 0;
+}
 
