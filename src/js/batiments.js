@@ -185,6 +185,9 @@ var timer = 100;
 addEventListener("mouseup", function() {
     clearInterval(intervalId);
 });
+addEventListener("touchend", function() {
+    clearInterval(intervalId);
+});
 document.getElementById('gantDiv').addEventListener("mousedown", function() {
     intervalId = setInterval(function() {
         acheterGant();
