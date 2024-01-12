@@ -1,0 +1,43 @@
+#leftSection {
+    background-color: goldenrod;
+    position: absolute;
+    width: 30%;
+    left: 5%;
+    top: 12%;
+    height: 90%;
+}
+
+#leftSection div{
+    background-size: cover;
+    background-position: center;
+    height: 10%;
+}
+
+#leftSection p{
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+#gantDiv{
+    background-image: url('../images/gants.jpg');
+}
+
+#piocheDiv{
+    background-image: url('../images/pioches.jpg');
+}
+
+#tracteurDiv{
+    background-image: url('../images/tracteur.jpg');
+}
+
+#fermeDiv{
+    background-image: url('../images/ferme.png');
+}
+
+#villageDiv{
+    background-image: url('../images/village.jpg');
+}
+
+#villeDiv{
+    background-image: url('../images/ville.jpg');
+}
